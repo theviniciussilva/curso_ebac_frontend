@@ -5,9 +5,13 @@ const campoB = document.getElementById('campoB');
 const mensagemFalha = document.querySelector('.message-error');
 let funciona = false;
 
-console.log(campoA.value);
 function calculaCampo(){    // funcão serve para fazer a mesma COISA toda hora
-    return campoB.value > campoA.value;
+    
+    let valor1 = campoA.value;
+    let valor2 = campoB.value;
+    let numero1 = parseInt(campoA.value);
+    let numero2 = parseInt(campoB.value);
+    return numero2 > numero1;
 }
 
 form.addEventListener('submit', function(e)
@@ -26,7 +30,7 @@ form.addEventListener('submit', function(e)
             campoA.classList.add('error');
             
         } 
-    
+        
 })
     campoA.addEventListener('keyup', function(e){
         funciona = calculaCampo(e.target.value)
