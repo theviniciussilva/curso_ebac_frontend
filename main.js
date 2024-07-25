@@ -18,7 +18,7 @@ $(document).ready(function(){
             $('#input-atividade').val("");
         }   
     }
-    $('ul').click(function(){
-        $('li').css('text-decoration', 'line-through');
-    })
+    $('ul').on('click', 'li', function(){
+        $(this).css('text-decoration', 'line-through');
+    });
 })
